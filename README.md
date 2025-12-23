@@ -1,6 +1,6 @@
 # Universal Rate Limiter Documentation
 
-> Modern documentation site for [universal-rate-limiter](https://github.com/MainaJoseph/universal-rate-limiter) - A TypeScript-first rate limiting library that works everywhere.
+> Modern documentation site for [universal-rate-limiter](https://www.npmjs.com/package/universal-rate-limiter) - A TypeScript-first rate limiting library that works everywhere.
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.1.1-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
@@ -123,14 +123,14 @@ touch app/new-page/page.tsx
 Use the `CodeBlock` component for syntax-highlighted code:
 
 ```tsx
-import { CodeBlock } from './components/CodeBlock';
+import { CodeBlock } from "./components/CodeBlock";
 
 <CodeBlock
   code={`your code here`}
   language="typescript"
   filename="example.ts"
   showLineNumbers={true}
-/>
+/>;
 ```
 
 ## 📄 Pages
