@@ -1,36 +1,198 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Universal Rate Limiter Documentation
 
-## Getting Started
+> Modern documentation site for [universal-rate-limiter](https://github.com/MainaJoseph/universal-rate-limiter) - A TypeScript-first rate limiting library that works everywhere.
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-16.1.1-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+
+## 🌟 Features
+
+- **📚 Comprehensive Documentation** - Complete guides for getting started, API reference, and real-world examples
+- **🎮 Live Playground** - Interactive rate limiter testing directly in the browser
+- **💻 Code Examples** - Ready-to-use examples for Express, Next.js, React, and more
+- **🎨 Modern UI** - Clean, responsive design with dark mode
+- **⚡ Fast Performance** - Built with Next.js 16 and optimized for speed
+- **📱 Mobile Friendly** - Fully responsive design that works on all devices
+- **🔍 SEO Optimized** - Meta tags, Open Graph, and semantic HTML
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+
+- pnpm (recommended) or npm
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Clone the repository
+git clone https://github.com/MainaJoseph/universal-limiter-web.git
+
+# Navigate to project directory
+cd universal-limiter-web
+
+# Install dependencies
+pnpm install
+
+# Run development server
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Syntax Highlighting:** [react-syntax-highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter)
+- **Theme:** [next-themes](https://github.com/pacocoursey/next-themes)
+- **Package Manager:** [pnpm](https://pnpm.io/)
 
-## Learn More
+## 📂 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+universal-limiter-web/
+├── app/
+│   ├── api/                 # API Reference page
+│   ├── components/          # Reusable components
+│   │   ├── CodeBlock.tsx    # Syntax-highlighted code blocks
+│   │   ├── Navigation.tsx   # Site navigation
+│   │   └── Footer.tsx       # Site footer
+│   ├── examples/            # Examples page with live playground
+│   ├── getting-started/     # Getting Started guide
+│   ├── layout.tsx           # Root layout
+│   ├── page.tsx             # Home page
+│   ├── providers.tsx        # Theme provider
+│   └── globals.css          # Global styles
+├── public/                  # Static assets
+├── tailwind.config.ts       # Tailwind configuration
+├── next.config.ts           # Next.js configuration
+└── package.json             # Dependencies
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Available Scripts
 
-## Deploy on Vercel
+```bash
+# Start development server
+pnpm dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Build for production
+pnpm build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Start production server
+pnpm start
+
+# Run linter
+pnpm lint
+
+# Type check
+pnpm type-check
+```
+
+### Environment Variables
+
+This project doesn't require any environment variables for basic functionality.
+
+## 🎨 Customization
+
+### Theme
+
+The site uses a dark-only theme. To modify theme colors:
+
+1. Edit `app/globals.css` for global color variables
+2. Update Tailwind classes in components for specific elements
+3. Modify `app/providers.tsx` to enable light mode if needed
+
+### Adding Pages
+
+Create a new folder in the `app/` directory:
+
+```bash
+mkdir app/new-page
+touch app/new-page/page.tsx
+```
+
+### Code Blocks
+
+Use the `CodeBlock` component for syntax-highlighted code:
+
+```tsx
+import { CodeBlock } from './components/CodeBlock';
+
+<CodeBlock
+  code={`your code here`}
+  language="typescript"
+  filename="example.ts"
+  showLineNumbers={true}
+/>
+```
+
+## 📄 Pages
+
+- **Home (`/`)** - Hero section, features, quick start, and use cases
+- **Getting Started (`/getting-started`)** - Installation and configuration guides
+- **API Reference (`/api`)** - Complete API documentation
+- **Examples (`/examples`)** - Live playground and code examples
+
+## 🚢 Deployment
+
+### Vercel (Recommended)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/MainaJoseph/universal-limiter-web)
+
+1. Push your code to GitHub
+2. Import project in Vercel
+3. Deploy
+
+### Other Platforms
+
+```bash
+# Build the project
+pnpm build
+
+# The output will be in .next folder
+# Deploy the .next folder to your hosting platform
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🔗 Links
+
+- **Package:** [universal-rate-limiter on npm](https://www.npmjs.com/package/universal-rate-limiter)
+- **Repository:** [GitHub](https://github.com/MainaJoseph/universal-rate-limiter)
+- **Documentation:** [Live Site](https://universal-rate-limiter.vercel.app)
+- **Issues:** [Report a bug](https://github.com/MainaJoseph/universal-limiter-web/issues)
+
+## 👨‍💻 Author
+
+**Joseph Maina**
+
+- GitHub: [@MainaJoseph](https://github.com/MainaJoseph)
+
+## 🙏 Acknowledgments
+
+- Built with [Next.js](https://nextjs.org/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Icons by [Lucide](https://lucide.dev/)
+
+---
+
+<p align="center">Made with ❤️ for the JavaScript community</p>
