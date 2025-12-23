@@ -7,7 +7,9 @@ export default function Home() {
 # or
 pnpm add universal-rate-limiter
 # or
-yarn add universal-rate-limiter`;
+yarn add universal-rate-limiter
+# or
+bun add universal-rate-limiter`;
 
   const quickStartCode = `import { createRateLimiter, MemoryStorage } from 'universal-rate-limiter';
 

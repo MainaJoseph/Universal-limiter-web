@@ -38,7 +38,10 @@ export default function GettingStarted() {
 pnpm add universal-rate-limiter
 
 # or with yarn
-yarn add universal-rate-limiter`}
+yarn add universal-rate-limiter
+
+# or with bun
+bun add universal-rate-limiter`}
             language="bash"
             showLineNumbers={false}
           />
